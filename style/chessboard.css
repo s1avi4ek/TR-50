@@ -7,21 +7,37 @@ html, body {
     margin: 0;
     height: 100%;
 }
-body, .board-row, .cell {
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.generate {
+    margin-bottom: 26px;
+    padding: 8px;
+}
+
+.board-border {
+    border: 0.5px solid #acacac;
+}
+
+.hidden {
+    display: none;
+}
+
+.board-row, .cell {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.board {
-    border: 0.5px solid #acacac;
 }
 
 .board-row {
     /* width: 100%; */
 }
 .cell {
-    border: 0.5px solid #acacac;
+    border: 1px solid #acacac;
     width: 4vw;
     height: 4vW;
 }
@@ -33,4 +49,14 @@ body, .board-row, .cell {
 }
 .cell-black {
     background-color: #2e2e2e;
+}
+
+@keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.appear-animation {
+    animation-name: appear;
+    animation-duration: 0.5s;
 }
