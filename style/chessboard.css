@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    min-height: 100%;
+    margin: 0;
+    height: 100%;
+}
+body, .board-row, .cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.board {
+    border: 0.5px solid #acacac;
+}
+
+.board-row {
+    /* width: 100%; */
+}
+.cell {
+    border: 0.5px solid #acacac;
+    width: 4vw;
+    height: 4vW;
+}
+.boardborders {
+    background-color: #d8cfb4;
+}
+.cell-white {
+    background-color: #efefef;
+}
+.cell-black {
+    background-color: #2e2e2e;
+}
