@@ -9,7 +9,7 @@ html {
 }
 body {
     height: 100%;
-    background-color: #f6f6f6;
+    background-color: #5a5a5a;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -92,12 +92,11 @@ a {
     padding: 3px 8px;
     box-sizing: border-box;
 }
-
 ::-webkit-scrollbar {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 2px #7b7b7b;
+    box-shadow: inset 0 0 4px #cdcdcd;
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb {
@@ -105,7 +104,7 @@ a {
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #7b7b7b;
+    background: #e1e1e1;
 }
 
 @media (width >= 560px) {
