@@ -43,6 +43,8 @@ a {
     width: var(--details-image-width);
     height: var(--details-image-height);
     border: 1px solid #e8e8e8;
+    max-height: 65vh;
+    max-width: 90vh;
 }
 .details-title {
     display: block;
