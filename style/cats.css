@@ -109,7 +109,7 @@ a {
 
 @media (width >= 560px) {
     :root {
-        --tumbnail-title-min-height: 3vh;
+        --tumbnail-title-min-height: 30px;
         --tumbnail-img-height: 10vw;
         --tumbnail-img-width: 13.3vw;
         --tumbnail-item-height: calc(var(--tumbnail-img-height) + var(--tumbnail-title-min-height));
