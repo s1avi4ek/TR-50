@@ -1,8 +1,8 @@
 :root {
     --tumbnail-img-height: 15vw;
     --tumbnail-img-width: 20vw;
-    --details-image-width: 70vw;
-    --details-image-height: 50vw;
+    --details-image-width: 83vw;
+    --details-image-height: 60vw;
 }
 html {
     height: 100%;
@@ -28,6 +28,10 @@ a {
     text-transform: uppercase;
     color: #2a2a2a;
 }
+.logo h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .main-class {
     display: flex;
     flex-direction: column;
@@ -35,9 +39,11 @@ a {
 .details-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: 26px;
     margin-bottom: 14px;
+    position: relative;
 }
 .details-image {
     width: var(--details-image-width);
@@ -49,16 +55,19 @@ a {
 .details-title {
     display: block;
     background-color: #f6f6f6;
-    padding: 8px 16px;
+    padding: 5px 10px;
     font-weight: 600;
     letter-spacing: 1px;
     box-shadow: 0 0 3px #ccc;
     margin-top: 14px;
+    position: absolute;
+    right: 7vh;
+    bottom: 1vh;
 }
 .thumbnails-list {
     display: flex;
     flex-wrap: wrap;
-    max-height: 37vh;
+    max-height: 45vh;
     overflow-y: scroll;
     list-style: none;
     justify-content: space-evenly;
@@ -115,20 +124,27 @@ a {
         --tumbnail-img-height: 10vw;
         --tumbnail-img-width: 13.3vw;
         --tumbnail-item-height: calc(var(--tumbnail-img-height) + var(--tumbnail-title-min-height));
-        --details-image-width: 60vh;
-        --details-image-height: 45vh;
-    }
-    .logo h2 {
-        margin-top: 0.4em;
-        margin-bottom: 0.4em;
+        --details-image-max-width: 80vh;
+        --details-image-max-height: 60vh;
     }
     .main-class {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        height: calc(100vh - 64px);
     }
     .details-container {
         margin: 0;
+        display: flex;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .details-title {
+        right: 1vh;
+    }
+    .details-image {
+        max-height: var(--details-image-max-height);
+        max-width: var(--details-image-max-width);
     }
     .thumbnails-list {
         order: -1;
@@ -161,14 +177,8 @@ a {
     :root {
         --details-image-width: 70vw;
         --details-image-height: 50vw;
-    }
-    .logo h2 {
-        margin-top: 0.83em;
-        margin-bottom: 0.83em;
-    }
-    .details-container {
-        margin-top: 26px;
-        margin-bottom: 14px;
+        --tumbnail-img-height: 6vw;
+        --tumbnail-img-width: 8vw;
     }
     .details-image {
         width: calc(var(--details-image-width) * 0.75);
@@ -176,5 +186,6 @@ a {
     }
     .thumbnails-list {
         max-height: 75vh;
+        gap: 1.8vw;
     }
 }
