@@ -44,6 +44,10 @@ a {
     margin-top: 26px;
     margin-bottom: 14px;
     position: relative;
+    transition: ease-in-out 0.2s;
+}
+.details-container-scale {
+    transform: scale(-1, 1);
 }
 .details-image {
     width: var(--details-image-width);
@@ -85,6 +89,10 @@ a {
 .thumbnails-item:hover {
     transform: scale(0.95);
 }
+.thumbnail-active {
+    border: solid 2px #f6f6f6;
+    transform: scale(0.95);
+}
 .thumbnails-anchor {
     display: flex;
     flex-direction: column;
@@ -117,6 +125,30 @@ a {
 ::-webkit-scrollbar-thumb:hover {
     background: #e1e1e1;
 }
+
+.prev, .next {
+    position: absolute;
+    display: block;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.5);
+    width: 24px;
+    height: 24px;
+    top: calc(50% - 12px);
+}
+.prev:hover, .next:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.prev img, .next img {
+    padding: 2px;
+}
+.prev {
+    left: 5px;
+}
+.next {
+    right: 5px;
+}
+
 
 @media (width >= 560px) {
     :root {
