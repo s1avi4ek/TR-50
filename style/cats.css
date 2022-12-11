@@ -47,7 +47,7 @@ a {
     transition: ease-in-out 0.2s;
 }
 .details-container-scale {
-    transform: scale(-1, 1);
+    transform: scale(-0.5, 1);
 }
 .details-image {
     width: var(--details-image-width);
@@ -67,6 +67,7 @@ a {
     position: absolute;
     right: 7vh;
     bottom: 1vh;
+    opacity: 0.75;
 }
 .thumbnails-list {
     display: flex;
@@ -130,7 +131,7 @@ a {
     position: absolute;
     display: block;
     text-align: center;
-    background-color: rgba(245, 245, 245, 0.5);
+    background-color: rgba(245, 245, 245, 0.75);
     width: 24px;
     height: 24px;
     top: calc(50% - 12px);
