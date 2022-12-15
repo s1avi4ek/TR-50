@@ -13,15 +13,18 @@
     <header class="logo">
         <h2>Cats Gallery</h2>
     </header>
-    <main class="main-class">
+    <main class="main-class hidden">
         <section class="details-container">
-            <img src="images/cat-1.jpg" class="details-image">
-            <span class="details-title">main cat details</span>
+            <div class="details-frame">
+                <img src="images/cat-1.jpg" class="details-image">
+                <span class="details-title">main cat details</span>
+                <button id="hide-button">×</button>
+            </div>
             <span class="prev"><img src="images/prev.svg" alt="prev"></span>
             <span class="next"><img src="images/next.svg" alt="prev"></span>
         </section>
         <ul class="thumbnails-list">
-            <li class="thumbnails-item thumbnail-active">
+            <li class="thumbnails-item">
                 <a class="thumbnails-anchor" href="#" data-details-image="images/cat-1.jpg" data-details-title = "Cute cat 1">
                     <img src="images/cat-1.jpg" class="thumbnails-image">
                     <span class="thumbnails-title">Cat 1</span>
