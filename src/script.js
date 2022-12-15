@@ -14,9 +14,11 @@ function setDetails(anchor, i) {
         mainContainer.classList.remove(HIDDEN);
     }
     const dataImage = anchor.getAttribute("data-details-image");
-    detailsImage.src = dataImage;
-    detailsTitle.innerHTML = anchor.getAttribute("data-details-title");
-    detailsContainer.setAttribute('data-index-details', `${i}`);
+    setTimeout(() => {
+        detailsImage.src = dataImage;
+        detailsTitle.innerHTML = anchor.getAttribute("data-details-title");
+        detailsContainer.setAttribute('data-index-details', `${i}`);
+    }, 140);
 }
 function activeThumbnail(el) {
     anchorElements.forEach(i => {
