@@ -109,7 +109,7 @@ a {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 7vw;
-    max-height: calc(100vh - 64px);;
+    max-height: calc(90vh - 64px);;
 }
 .thumbnails-item {
     border: solid 2px #7b7b7b;
