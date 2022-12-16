@@ -7,18 +7,29 @@ const mainContainer = document.querySelector('.main-class'),
     prev = document.querySelector('.prev'),
     next = document.querySelector('.next'),
     hideBtn = document.querySelector('#hide-button'),
-    HIDDEN = 'hidden';
+    HIDDEN = 'hidden',
+    audio = document.querySelector('#audio');
 
 function setDetails(anchor, i) {
     if (mainContainer.classList.contains(HIDDEN)) {
         mainContainer.classList.remove(HIDDEN);
     }
     const dataImage = anchor.getAttribute("data-details-image");
+    playAudio(anchor, i);
     setTimeout(() => {
         detailsImage.src = dataImage;
         detailsTitle.innerHTML = anchor.getAttribute("data-details-title");
         detailsContainer.setAttribute('data-index-details', `${i}`);
     }, 140);
+}
+function playAudio(anchor, i){
+    if (detailsContainer.getAttribute('data-index-details') != i) {
+        audio.src=anchor.getAttribute('data-audio');
+        audio.play();
+        setTimeout(() => {
+            audio.pause();
+        }, 3000);
+    }
 }
 function activeThumbnail(el) {
     anchorElements.forEach(i => {
@@ -43,7 +54,7 @@ function changeImageAnimation(i) {
 function addDadaIndexAttr(el, i) {
     el.setAttribute('data-index', `${i}`);
 }
-// detailsContainer.setAttribute('data-index-details', `0`);
+
 for (let i = 0; i < anchorElements.length; i++) {
     addDadaIndexAttr(anchorElements[i], i);
     anchorElements[i].addEventListener("click", e => {
