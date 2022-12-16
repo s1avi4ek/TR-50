@@ -15,6 +15,7 @@ function setDetails(anchor, i) {
         mainContainer.classList.remove(HIDDEN);
     }
     const dataImage = anchor.getAttribute("data-details-image");
+    audio.pause();
     playAudio(anchor, i);
     setTimeout(() => {
         detailsImage.src = dataImage;
@@ -86,6 +87,7 @@ next.addEventListener('click', () => {
 });
 
 hideBtn.addEventListener('click', () => {
+    detailsContainer.setAttribute('data-index-details', '-1');
     detailsFrame.classList.add('details-container-scale-main');
     setTimeout(() => {
         mainContainer.classList.add(HIDDEN);
